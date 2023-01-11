@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.content-all{
+    width: 220px;
+    margin: auto;
+   perspective: 1000px;
+   position: relative;
+   margin-top: 50px;
+}
+.content-carrousel{
+    width: 100%;
+    position: absolute;
+    animation: rotar 10s infinite linear;
+    transform-style: preserve-3d;
+}
+.content-carrousel:hover{
+    animation-play-state: paused;
+    cursor: pointer;
+}
+.content-carrousel figure{
+    width: 100%;
+    height: 170px;
+    overflow: hidden;
+    position: absolute;
+    box-shadow: 0px 0px 20px 0px black;
+    transition: all 300ms;
+}
+.content-carrousel figure:hover{
+    box-shadow: 0px 0px 0px 0px black;
+    transition: all 300ms;
+}
+.content-carrousel figure:nth-child(1){
+    transform: rotateY(0deg) translateZ(300px);
+}
+.content-carrousel figure:nth-child(2){
+    transform: rotateY(45deg) translateZ(300px);
+}
+.content-carrousel figure:nth-child(3){
+    transform: rotateY(90deg) translateZ(300px);
+}
+.content-carrousel figure:nth-child(4){
+    transform: rotateY(135deg) translateZ(300px);
+}
+.content-carrousel figure:nth-child(5){
+    transform: rotateY(180deg) translateZ(300px);
+}
+.content-carrousel figure:nth-child(6){
+    transform: rotateY(225deg) translateZ(300px);
+}
+.content-carrousel figure:nth-child(7){
+    transform: rotateY(270deg) translateZ(300px);
+}
+.content-carrousel figure:nth-child(8){
+    transform: rotateY(315deg) translateZ(300px);
+}
+.content-carrousel figure:nth-child(9){
+    transform: rotateY(360deg) translateZ(300px);
+}
+.content-carrousel img{
+    width: 100%;
+    transition: all 300ms;
+}
+.content-carrousel img:hover{
+    transition: all 300ms;
+    transform: scale(1.2);
+}
+.rectangulo1{
+    background: #4fabe1;
+    width: 30px;
+    height: 30px;
+    margin-bottom: -20px;
+    transform: skew(20deg);
+}
+.rectangulo3{
+    background: linear-gradient(to top, #58d30b, #399c02);
+    margin-left: 10px;
+    width: 150px;
+    height: 50px;
+    font-weight: 800;
+    padding-top: 10px;
+    text-transform: uppercase;
+    opacity: 0.8;
+    transform: skew(-20deg);
+}
+.rectangulo3 a{
+    text-decoration: none;
+    padding-top: 20px;
+    font-size: 1.1rem;
+}
+.rectangulo2{
+    background: #19199d;
+    margin-top: 5px;
+    margin-left: 35%;
+    width: 35px;
+    height: 40px;
+    transform: skew(20deg);
+}
+@keyframes rotar {
+    from {
+        transform: rotateY(0deg);
+    }
+    to{
+        transform: rotateY(360deg);
+    }
+}
